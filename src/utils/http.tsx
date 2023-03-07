@@ -95,6 +95,6 @@ export const formatDataForTokenization = (
 };
 
 export const getEnvironment = (key: string) =>
-  MBC_LIVE_PUBLIC_KEY_REGEX.test(key) || NAS_LIVE_PUBLIC_KEY_REGEX.test(key)
+  MBC_LIVE_PUBLIC_KEY_REGEX?.test(key) || NAS_LIVE_PUBLIC_KEY_REGEX?.test(key)
     ? `${LIVE_BASE_URL}/tokens`
     : `${SANDBOX_BASE_URL}/tokens`;
